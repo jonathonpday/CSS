@@ -1,3 +1,5 @@
+/* To run do npm i and npm start */
+
 * {
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
@@ -13,6 +15,16 @@ body {
 
 /* Looking at card we see it is 800px wide - all text is on same side but not stretched out to full width (content is on new lines) */
 
+/* 
+h1
+font size and line height can be seen of figma and are changed to match designs.
+From reading docs we now default size and use 2rem to give user more control.
+Remove all margin is just good practice first to clear all defaults.]
+
+Margin-bottom seen in figma for both h1 and p -= used in both
+
+*/
+
 h1 {
   font-size: 2rem;
   line-height: 1.2;
@@ -20,12 +32,24 @@ h1 {
   margin-bottom: 3rem;
 }
 
+/* 
+Same as above - font-size and line height set in doc and used. Margin is defaulted to 0.
+
+The margin bottom for both is seen in figma and again uses rems for accessability
+
+*/
+
 p {
   font-size: 1.25rem;
   line-height: 1.5;
   margin: 0;
   margin-bottom: 1rem;
 }
+
+/* 
+p:last-child - we see in the figma the final paragraph has no margin and so we remove it.
+
+*/
 
 p:last-child {
   margin-bottom: 0;
@@ -64,10 +88,22 @@ width is also seen ijn figma to create 'box' to constrain text - max-width means
   padding-bottom: 64px;
 }
 
+/* 
+main
+Background color added
+padding to match style of figma and create gap for card.
+*/
+
 main {
   background-color: hsla(0, 0%, 40%, 1);
   padding: 64px 0;
 }
+
+/* 
+.card
+Padding added to keep text away from edges.
+Negative margin used to move card and text back so all text is in line.
+*/
 
 .card {
   background-color: white;
@@ -75,6 +111,20 @@ main {
   margin: 0 -24px;
   border-bottom: 8px solid hsla(0, 0%, 60%, 1);
 }
+
+/* 
+.indented-heading
+font size, line height padding, background-color and border all copied from figma.
+width: fit-content - used to reduce size of box to fit closer around text.
+
+In figma all design is in units of 8 - so we calculate using figma and experimentation to move box until it matches design with negative width & height.
+
+Why use px on margin top and rem on margin bottom?
+Readability - the 8 px at the top remains no matter what - the other can now be altered by the user as required.
+
+"Should the value expand with the users font size?"
+
+*/
 
 .indented-heading {
   font-size: 1.5rem;
